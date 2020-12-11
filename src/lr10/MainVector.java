@@ -4,8 +4,9 @@ import java.lang.Math.*;
 import java.util.Scanner;
 import java.io.*;
 
-import lr9.Radius;
-import lr9.Vector;
+import lr10.Radius;
+import lr10.Vector;
+import lr10.Exc;
 
 public class MainVector {
 	public static void main(String[] args) {
@@ -20,8 +21,21 @@ public class MainVector {
 		Vector b = new Vector(1, 0, -2, rad);
 		Vector c = new Vector();
 		System.out.printf("Количество созданных векторов: %d\n", Vector.GetCountOfVector());
-		System.out.print("Введите координаты и радиус a: ");
-		a.read();
+        int p = 0;
+        while (p == 0)
+        {
+            p = 1;
+            try
+            {
+            	System.out.print("Введите координаты и радиус a [-100;100]: ");
+                a.read();
+            }
+            catch (Exc e)
+            {
+            	System.out.println("Повторите ввод");
+                p = 0;
+            }
+        }
 		System.out.println("Цилиндры:");
 		System.out.print("a ");
 		a.display();
@@ -43,9 +57,22 @@ public class MainVector {
         for (int i = 0; i < 3; i++)
         	arr[i] = new Vector(i);
         
-        System.out.print("Введите координаты и радиус a: ");
-        arr[0].read();
-
+        p = 0;
+        while (p == 0)
+        {
+            p = 1;
+            try
+            {
+            	System.out.print("Введите координаты и радиус a [-100;100]: ");
+                a.read();
+            }
+            catch (Exc e)
+            {
+            	System.out.println("Повторите ввод");
+                p = 0;
+            }
+        }
+        
         System.out.println("Цилиндры:");
         System.out.print("arr[0] ");
         arr[0].display();

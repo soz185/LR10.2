@@ -1,5 +1,7 @@
 package lr10;
 
-public class Exc {
+public class Exc extends Exception
+{
+	Exc() { };
 
 }
