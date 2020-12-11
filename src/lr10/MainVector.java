@@ -6,7 +6,6 @@ import java.io.*;
 
 import lr10.Radius;
 import lr10.Vector;
-import lr10.Exc;
 
 public class MainVector {
 	public static void main(String[] args) {
@@ -30,7 +29,7 @@ public class MainVector {
             	System.out.print("Введите координаты и радиус a [-100;100]: ");
                 a.read();
             }
-            catch (Exc e)
+            catch (Exception e)
             {
             	System.out.println("Повторите ввод");
                 p = 0;
@@ -66,7 +65,7 @@ public class MainVector {
             	System.out.print("Введите координаты и радиус a [-100;100]: ");
                 a.read();
             }
-            catch (Exc e)
+            catch (Exception e)
             {
             	System.out.println("Повторите ввод");
                 p = 0;

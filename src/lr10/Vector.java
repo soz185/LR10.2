@@ -42,14 +42,14 @@ public class Vector {
 		if (countOfVectors > 0)
 			countOfVectors--;
 	}
-	public void read() throws Exc{
+	public void read() throws Exception{
 		Scanner input = new Scanner(System.in);
 		X = input.nextDouble();
 		Y = input.nextDouble();
 		Z = input.nextDouble();
 		cylinderRadius.readRadius();
 		if (X < -100 || X > 100 || Y < -100 || Y > 100 || Z < -100 || Z > 100 || cylinderRadius.returnRadius() < -100 || cylinderRadius.returnRadius() > 100)
-			throw new Exc();
+			throw new Exception();
 
 	}
 	public void display() {
